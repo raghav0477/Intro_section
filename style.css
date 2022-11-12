@@ -1,0 +1,87 @@
+:root{
+    --white: #fafafa;
+    --gray: #696969;
+    --black: #141414;
+}
+*{
+    box-sizing: border-box;
+    font-family: 'Epilogue', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+header{
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left{
+    display: flex;
+    flex-direction: row;
+}
+.nav-list{
+    display: flex;
+    margin: 0 2rem;
+    align-items: center;
+}
+li,a{
+    margin: 0 1.5rem;
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 500;
+    font-size: 18px;
+    align-items: center;
+}
+button{
+    padding: 15px 20px;
+    border-radius: 15px;
+}
+.container{
+    width: 1440px;
+    margin: 0 auto;
+}
+.hero{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.hero-left{
+    margin-top: 5rem;
+}
+.hero-right img{
+    height: 40rem;
+}
+.title{
+    font-size: 100px;
+    font-weight: 700;
+}
+.sub-title{
+    overflow: hidden;
+    color: var(--gray);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 2rem;
+    padding: 2.5rem 0;
+}
+.user-list{
+    margin-top: 5rem;
+}
+.user-list img{
+    width: 6rem;
+}
+.drop_down_content{
+    display: none;
+    flex-direction: column;
+}
+.nav-list a:hover{
+    background-color: rebeccapurple;
+}
+.drop_down_content:hover{
+    color: red;
+    background-color: #141414
+}
+.nav-list a:hover .drop_down_content{
+    display: block;
+}
