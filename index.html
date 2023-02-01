@@ -29,7 +29,7 @@
         <img src="./images/logo.svg" alt="" />
         <ul class="nav-list">
           <li>
-            <div>
+            <div class="menu-dropdown">
               <a href="#" class="drop"
                 >Features<span class="material-symbols-outlined">
                   keyboard_arrow_down
@@ -37,20 +37,29 @@
               >
               <div class="drop_down_content">
                <ul>
-                <li>ap</li>
-                <li>ap</li>
-                <li>ap</li>
-                <li>ap</li>
+                <li> <img src="./images/icon-todo.svg" alt="Todo"> Todo List</li>
+                <li><img src="./images/icon-calendar.svg" alt="Calender"> Calender</li>
+                <li><img src="./images/icon-reminders.svg" alt="Remainders"> Remainders</li>
+                <li><img src="./images/icon-planning.svg" alt="Planning"> Planning</li>
                </ul>
               </div>
             </div>
           </li>
           <li>
-            <a href="#"
-              >Company<span class="material-symbols-outlined">
-                keyboard_arrow_down
-              </span></a
-            >
+            <div class="menu-dropdown">
+              <a href="#" class="drop"
+                >Company<span class="material-symbols-outlined">
+                  keyboard_arrow_down
+                </span></a
+              >
+              <div class="drop_down_content">
+               <ul>
+                <li>History </li>
+                <li>Our Team </li>
+                <li>Blog </li>
+               </ul>
+              </div>
+            </div>
           </li>
           <li><a href="#">Careers</a></li>
           <li><a href="#">About</a></li>
@@ -60,12 +69,30 @@
         <ul class="nav-list">
           <li>Login</li>
           <li>
-            <button><a href="#">Register</a></button>
+            <button>Register</button>
           </li>
         </ul>
       </div>
     </header>
+    <div id="mob-nav">
+      <!-- <div class="mob-title">Snap</div> -->
+      <img src="./images/logo.svg" alt="logo">
+      <div class="hamburger-lines">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+    </div>
+    <ul class="menu-items">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#food">Category</a></li>
+      <li><a href="#food-menu">Menu</a></li>
+      <li><a href="#testimonials">Testimonial</a></li>
+      <li><a href="#contact">Contact</a></li>
+  </ul>
+    </div>
     <div class="hero container">
+   
       <div class="hero-left">
         <div class="title">Make <br />remote Work</div>
         <div class="sub-title">
@@ -73,7 +100,8 @@
           Streamline processes, creates team rituals, and <br />
           watch productivity <soar class=""></soar>
         </div>
-        <button><a href="#">Learn More</a></button>
+        <button>Learn More</button>
+        
         <div class="user-list">
           <ul class="nav-list">
             <li><img src="./images/client-databiz.svg" alt="" /></li>
@@ -83,6 +111,7 @@
           </ul>
         </div>
       </div>
+      
       <div class="hero-right">
         <img src="./images/image-hero-desktop.png" alt="" />
       </div>

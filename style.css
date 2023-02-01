@@ -1,87 +1,192 @@
-:root{
-    --white: #fafafa;
-    --gray: #696969;
-    --black: #141414;
+:root {
+  --white: #fafafa;
+  --gray: #696969;
+  --black: #141414;
 }
-*{
-    box-sizing: border-box;
-    font-family: 'Epilogue', sans-serif;
-    padding: 0;
-    margin: 0;
+* {
+  box-sizing: border-box;
+  font-family: "Epilogue", sans-serif;
+  padding: 0;
+  margin: 0;
 }
-header{
-    padding: 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.left{
-    display: flex;
-    flex-direction: row;
+.left {
+  display: flex;
+  flex-direction: row;
 }
-.nav-list{
-    display: flex;
-    margin: 0 2rem;
-    align-items: center;
+.nav-list {
+  display: flex;
+  margin: 0 2rem;
+  align-items: center;
 }
-li,a{
-    margin: 0 1.5rem;
-    display: flex;
-    list-style: none;
-    text-decoration: none;
-    color: var(--black);
-    font-weight: 500;
-    font-size: 18px;
-    align-items: center;
+li,
+a {
+  margin: 0 1rem;
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+  color: var(--black);
+  font-weight: 500;
+  font-size: 18px;
+  align-items: center;
+  cursor: pointer;
 }
-button{
-    padding: 15px 20px;
-    border-radius: 15px;
+button {
+  padding: 15px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  color: var(--white);
+  font-weight: 700;
+  background-color: var(--black);
 }
-.container{
-    width: 1440px;
-    margin: 0 auto;
+button:hover {
+  color: var(--black);
+  background-color: var(--white);
+  font-weight: 700;
 }
-.hero{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.container {
+  width: 1440px;
+  margin: 0 auto;
 }
-.hero-left{
-    margin-top: 5rem;
+.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-.hero-right img{
-    height: 40rem;
+.hero-left {
+  margin-top: 5rem;
 }
-.title{
-    font-size: 100px;
-    font-weight: 700;
+.hero-right img {
+  height: 40rem;
 }
-.sub-title{
-    overflow: hidden;
-    color: var(--gray);
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 2rem;
-    padding: 2.5rem 0;
+.title {
+  font-size: 100px;
+  font-weight: 700;
 }
-.user-list{
-    margin-top: 5rem;
+.sub-title {
+  overflow: hidden;
+  color: var(--gray);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 2rem;
+  padding: 2.5rem 0;
 }
-.user-list img{
-    width: 6rem;
+.user-list {
+  margin-top: 5rem;
 }
-.drop_down_content{
+.user-list img {
+  width: 6rem;
+}
+/* .menu-dropdown {
+  position: relative;
+  display: inline-block;
+  padding-left: 2rem;
+} */
+.menu-dropdown:hover .drop_down_content {
+  display: block;
+}
+
+.drop_down_content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  z-index: 1;
+  border-radius: 10px;
+}
+.drop_down_content li {
+  padding: 10px 0;
+}
+.drop_down_content li img {
+  margin-right: 10px;
+}
+#mob-nav{
     display: none;
-    flex-direction: column;
 }
-.nav-list a:hover{
-    background-color: rebeccapurple;
-}
-.drop_down_content:hover{
-    color: red;
-    background-color: #141414
-}
-.nav-list a:hover .drop_down_content{
+@media only screen and (max-width: 576px) {
+  header {
+    display: none;
+  }
+  .container {
+    width: 100vw;
+  }
+  #mob-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fff;
+  }
+  #mob-nav img{
+    width: 80px;
+    height: 40px;
+  }
+  .hamburger-lines {
     display: block;
+  }
+  .hamburger-lines {
+    display: block;
+    height: 23px;
+    width: 35px;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #333;
+  }
+
+   .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .hero-right img {
+    width: 100vw;
+    height: 25rem;
+    object-fit: cover;
+  }
+  .hero-left{
+    text-align: center;
+  }
+  .title {
+    font-size: 32px;
+  }
+  .nav-list {
+    display: none;
+  }
+  .sub-title {
+    font-size: 15px;
+    line-height: 1.5rem;
+  }
+  br {
+    display: none;
+  }
 }
