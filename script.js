@@ -1,14 +1,31 @@
-const drop_menu = document.querySelector(".drop_down_content");
-const menu = document.querySelector(".drop")
-const arrow = document.querySelector("span");
+const feature_menu = document.querySelector("#feature-Dropdown");
+const company_menu = document.getElementById("company-dropdown");
 
-menu.onClick = function(){
-    show_list();
+
+
+function myFunction() {
+    feature_menu.classList.toggle("active");
+    company_menu.classList.remove("active");
+  }
+function function2(){
+    company_menu.classList.toggle("active");
+    feature_menu.classList.remove("active");
 }
-function show_list(){
-    drop_menu.classList.add("active");
-    // drop_menu.style.display === "block";
+
+
+const add = document.querySelector(".material-symbols-outlined");
+const mobile_nav = document.querySelector(".mobile-nav-menu")
+const close = document.querySelector(".mobile-nav-icon-close")
+const body = document.querySelector("body")
+console.log(body);
+const toogleNavbar = ()=>{
+  mobile_nav.classList.add("show")
+  body.classList.add("fixed-position");
 }
-console.log("apple")
-console.log(menu)
-console.log(drop_menu)
+const removeClass = ()=>{
+  mobile_nav.classList.remove("show")
+  body.classList.remove("fixed-position");
+}
+console.log(close);
+add.addEventListener('click', ()=> toogleNavbar())
+close.addEventListener('click', ()=> removeClass())

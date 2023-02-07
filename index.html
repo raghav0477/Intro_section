@@ -14,84 +14,103 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0"
     />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Epilogue:wght@200;400;500;700&display=swap"
       rel="stylesheet"
     />
+    
     <link rel="stylesheet" href="./style.css" />
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
   </head>
   <body>
     <header>
-      <div class="left">
-        <img src="./images/logo.svg" alt="" />
-        <ul class="nav-list">
-          <li>
-            <div onclick="show_list" class="menu-dropdown">
-              <p class="drop"
-                >Features<span class="material-symbols-outlined">
+      <img src="./images/logo.svg" alt="" />
+      <nav>
+        <div class="left">
+          <ul class="nav-list">
+            <li>
+              <div class="dropdown">
+                <p onclick="myFunction()" class="dropbtn">Features<span class="material-symbols-outlined">
                   keyboard_arrow_down
                 </span></p>
-              <div class="drop_down_content">
-               <ul>
-                <li> <img src="./images/icon-todo.svg" alt="Todo"> Todo List</li>
-                <li><img src="./images/icon-calendar.svg" alt="Calender"> Calender</li>
-                <li><img src="./images/icon-reminders.svg" alt="Remainders"> Remainders</li>
-                <li><img src="./images/icon-planning.svg" alt="Planning"> Planning</li>
-               </ul>
+                <div id="feature-Dropdown" class="dropdown-content">
+                  <ul>
+                    <li href="#home"><img src="./images/icon-todo.svg" alt="Todo"> Todo List</li>
+                  <li href="#about"><img src="./images/icon-calendar.svg" alt="Calender"> Calender</li>
+                  <li href="#contact"><img src="./images/icon-reminders.svg" alt="Remainders"> Remainders</li>
+                  <li href="#contact"><img src="./images/icon-planning.svg" alt="Planning"> Planning</li>
+                  </ul>
+                  
+                </div>
               </div>
-            </div>
-          </li>
-          <li>
-            <div class="menu-dropdown">
-              <p class="drop"
-                >Company<span class="material-symbols-outlined">
+            </li>
+            <li>
+              
+              <div class="dropdown">
+                <p onclick="function2()" class="dropbtn">Company<span class="material-symbols-outlined">
                   keyboard_arrow_down
-                </span></p
-              >
-              <div class="drop_down_content">
-               <ul>
-                <li>History </li>
-                <li>Our Team </li>
-                <li>Blog </li>
-               </ul>
+                </span></p>
+                <div id="company-dropdown" class="dropdown-content">
+                  <ul>
+                    <li href="#home">History</li>
+                  <li href="#about">Our Team</li>
+                  <li href="#contact">Blog</li>
+                
+                </div>
               </div>
-            </div>
-          </li>
-          <li><p>Careers</p></li>
-          <li><p>About</p></li>
-        </ul>
-      </div>
-      <div class="right">
-        <ul class="nav-list">
-          <li>Login</li>
-          <li>
-            <button>Register</button>
-          </li>
-        </ul>
-      </div>
+            </li>
+            <li><p>Careers</p></li>
+            <li><p>About</p></li>
+          </ul>
+        </div>
+        <div class="right">
+          <ul class="nav-list">
+            <li>Login</li>
+            <li>
+              <button class="btn-sml">Register</button>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
-    <!-- <div id="mob-nav">
-      <div class="mob-title">Snap</div>
-      <img src="./images/logo.svg" alt="logo">
-      <div class="hamburger-lines">
-        <span class="line line1"></span>
-        <span class="line line2"></span>
-        <span class="line line3"></span>
-    </div>
-    <ul class="menu-items">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#food">Category</a></li>
-      <li><a href="#food-menu">Menu</a></li>
-      <li><a href="#testimonials">Testimonial</a></li>
-      <li><a href="#contact">Contact</a></li>
-  </ul>
-    </div> -->
-    <div class="hero container">
-   
+
+    <nav class="mobile-nav active">
+      <div class="mobile-profile">
+        <a href="#"><img src="./assests/img.png" alt="" class="avatar" /></a>
+
+      <div class="mobile-nav-btn">
+        <span name="menu-outline" class="material-symbols-outlined ">
+          menu
+          </span>
+      </div>
+
+      <div class="mobile-nav-menu">
+        <div class="mobile-nav-btn">
+          <span name="menu-outline" class="material-symbols-outlined">
+            menu
+            </span>
+        </div>
+        <div class="mob-nav-list">
+          <ul class="flex column">
+            <li class="styling list-item ft-bg"><a href="/" class="styling">Premium</a></li>
+            <li class="styling list-item ft-bg"><a href="/" class="styling">Support</a></li>
+            <li class="styling list-item ft-bg"><a href="/" class="styling">Download</a></li>
+            <p class="seprator"></p>
+            <div class="div flex column justify-between">
+              <li class="list-item styling ft-sm">Account</li>
+              <li class="list-item styling ft-sm">Log Out</li>
+              <img src="./assests/Spotify_Logo_RGB_White.png" alt="" class="logo top">
+            </div>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="hero" id="hero">
       <div class="hero-left">
         <div class="title">Make <br />remote work</div>
         <div class="sub-title">
@@ -99,10 +118,10 @@
           Streamline processes, creates team rituals, and <br />
           watch productivity <soar class=""></soar>
         </div>
-        <button>Learn More</button>
+        <button class="btn-bg">Learn More</button>
         
         <div class="user-list">
-          <ul class="nav-list">
+          <ul class="img-list">
             <li><img src="./images/client-databiz.svg" alt="" /></li>
             <li><img src="./images/client-audiophile.svg" alt="" /></li>
             <li><img src="./images/client-meet.svg" alt="" /></li>
@@ -112,7 +131,18 @@
       </div>
       
       <div class="hero-right">
-        <img src="./images/image-hero-desktop.png" alt="" />
+        <!-- <img src="./images/image-hero-desktop.png" alt="" /> -->
+        <picture>
+          <source 
+            media="(max-width: 650px)"
+            srcset="./images/image-hero-mobile.png">
+          <source 
+            media="(max-width: 450px)"
+            srcset="./images/image-hero-desktop.png">
+          <img 
+            src="./images/image-hero-desktop.png" 
+            alt="image">
+        </picture>
       </div>
     </div>
 
