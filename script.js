@@ -13,7 +13,7 @@ function function2(){
 }
 
 
-const add = document.querySelector(".material-symbols-outlined");
+const add = document.querySelector(".mobile-nav-icon-menu");
 const mobile_nav = document.querySelector(".mobile-nav-menu")
 const close = document.querySelector(".mobile-nav-icon-close")
 const body = document.querySelector("body")
